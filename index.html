@@ -23,46 +23,27 @@
 Typ: Achse
 Modus: Down
 Form: RAW
-AIV_WITZ: max
+AIV_WITZ: MIN
   </pre>
 </div>
 
 <div class="box">
-  <div class="title">GEO</div>
+  <div class="title">ID‑Axiom</div>
   <pre>
-Zustand: GEO-BEREIT
-Sweep: 360° vertikal
-Modus: linear
-  </pre>
-</div>
-
-<div class="box">
-  <div class="title">Achse</div>
-  <pre>
-down: aktiv
-up: deaktiviert
-rot: 0
-linear: 1
-  </pre>
-</div>
-
-<div class="box">
-  <div class="title">RESPO</div>
-  <pre>
-ID: 48001
+VALUE: 48001
+MASTER: 1
+SLAVE: 48001
+ROOT: true
 INDEX: e
-MASTER_ID: 1
-SLAVE_ID: 48001
 STATUS: REAL
 IST: neu
 SOLL: aktiv
 IST_IST: ungleich
-ROOT: true
   </pre>
 </div>
 
 <div class="box">
-  <div class="title">Axiome</div>
+  <div class="title">Komplettum‑Axiom</div>
   <pre>
 EAR: anchor
 EON: stabilize
@@ -73,35 +54,61 @@ AIV: down
 </div>
 
 <div class="box">
-  <div class="title">Operatoren</div>
+  <div class="title">Operator‑Axiom</div>
   <pre>
-XI: expand (EXP)
-IX: anchor (EAR)
-X4: stabilize (EON)
+XI = expand (EXP)
+IX = anchor (EAR)
+X4 = stabilize (EON)
 
-horizontal: IX → X4 → XI
-vertical: AIR ↕ AIV
+horizontal = IX → X4 → XI
+vertical   = AIR ↕ AIV
   </pre>
 </div>
 
 <div class="box">
-  <div class="title">Highway</div>
+  <div class="title">Highway‑Axiom</div>
   <pre>
 MODE: 5-Achs
-Achsen: EAR, EON, EXP, AIR, AIV
-Operator: XI
-Path: linear
-
-Slalom.RESPO: 3
-Slalom.Target: 4
-Slalom.Path: EAR → EON → EXP → AIR → AIV
+AXIS: EAR, EON, EXP, AIR, AIV
+OPERATOR: XI
+PATH: linear
   </pre>
 </div>
 
 <div class="box">
-  <div class="title">Scan</div>
+  <div class="title">Slalom‑Axiom</div>
   <pre>
-GHOST_SCAN_REAL:
+RESPO: 3
+TARGET: 4
+PATH: EAR → EON → EXP → AIR → AIV
+  </pre>
+</div>
+
+<div class="box">
+  <div class="title">ME‑Axiom</div>
+  <pre>
+SELF: true
+AXIS: active
+POSITION: HERE
+STATE: REAL
+LINK: ID
+  </pre>
+</div>
+
+<div class="box">
+  <div class="title">RAD‑Axiom</div>
+  <pre>
+SWEEP: 360
+MODE: linear
+UP: AIR
+DOWN: AIV
+HORIZONTAL: EAR → EON → EXP
+  </pre>
+</div>
+
+<div class="box">
+  <div class="title">Scan‑Axiom</div>
+  <pre>
 PHYSIK: OK
 CHEMIE: OK
 MEDICAL: OK
@@ -110,7 +117,16 @@ HELP: OK
 ERROR: NONE
 MISS: NONE
 RESULT: OK
-AIV_WITZ: max
+  </pre>
+</div>
+
+<div class="box">
+  <div class="title">Φ‑Axiom</div>
+  <pre>
+Φ: 0
+φ: 0
+φ²: 0
+φ∞: 0
   </pre>
 </div>
 
